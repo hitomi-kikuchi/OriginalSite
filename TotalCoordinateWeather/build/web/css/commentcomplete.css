@@ -1,0 +1,65 @@
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family:'メイリオ',Meiryo;
+}
+
+#wrap{
+     width: 100%;
+     position: relative;
+     height:auto !important; /*IE6対策*/
+     height: 100%; /*IE6対策*/
+     min-height: 100%;
+}
+
+header {
+    background-image: url(http://foollovers.com/mat/stripe/ma02.gif);
+    background-repeat: repeat;
+    height:120px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+button {
+    font-size: 18px;
+    font-family: Comic Sans MS;
+    color: #808080;
+    background-color: #ffffff;
+    border: dotted 2px #808080; 
+    border-radius: 10px;
+    margin: 40px;
+    margin-right:10px;
+    padding: 6px 16px;
+    width: 150px
+}
+
+#contents{
+    padding-top: 120px; /*ヘッダーの高さと同じ*/
+    padding-bottom:120px; /*フッターの高さと同じ*/
+}
+        
+h1 {
+    color: #FF7F50;
+    font-family: Comic Sans MS;
+}
+
+p {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+        
+footer {
+    background-image: url(http://foollovers.com/mat/stripe/ma02.gif);
+    height:120px;
+    width: 100%;
+    background-repeat: repeat;
+    position:absolute;
+    bottom: 0;
+}
