@@ -17,8 +17,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
-        <!--css-->
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/registrationconfirm.css">
+        <!-- css -->
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/tcw.css">
 
         <title>TCW 新規登録確認page</title>
     </head>
@@ -28,8 +28,8 @@
             <div id="contents">
                 <center>
                     <% if(chkList.size() == 0) { %>
-                    <h1>Registrotion Confirm</h1>
-                    <div class="frame">
+                    <h1>- Registrotion Confirm -</h1>
+                    <div class="frame other">
                         NAME: <%= udb.getName() %><br>
                         PASS: <%= udb.getPassword() %><br>
                         AGE: <%= tcwh.exAgenum(udb.getAge()) %><br>
@@ -38,21 +38,21 @@
                     <!--/.frame--></div>
                     <p>以上の内容で登録します。よろしいですか？</p>
                     <form action="RegistrationComplete" method="POST">
-                        <input class="submit-button" type="submit" name="yes" value="YES">
+                        <input class="btn" type="submit" name="yes" value="YES">
                         <%--アクセスルートチェック--%>
                         <input type="hidden" name="ac" value="<%= hs.getAttribute("ac") %>">
                     </form>
                     <form action="Registration" method="POST">
-                        <input class="submit-button" type="submit" name="no" value="NO">
+                        <input class="btn" type="submit" name="no" value="NO">
                         <input type="hidden" name="mode" value="REINPUT">
                     </form>
                     <% }else { %>
                     <h1>Not input!!</h1>
-                    <div class="frame">
+                    <div class="frame other">
                         <%= tcwh.chkinput(chkList) %>
                     <!--/.frame--></div>
                     <form action="Registration" method="POST">
-                        <input class="submit-button" type="submit" name="no" value="登録画面へ戻る">
+                        <input class="btn" type="submit" name="no" value="登録画面へ戻る">
                         <input type="hidden" name="mode" value="REINPUT">
                     </form>
                     <% } %>

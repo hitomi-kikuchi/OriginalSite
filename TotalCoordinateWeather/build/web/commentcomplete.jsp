@@ -13,21 +13,24 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
-        <!--css-->
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/commentcomplete.css">
+        <!-- css -->
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/tcw.css">
 
         <title>コメント記入完了 Page</title>
     </head>
     <body>
         <div id="wrap">
             <header>
-                <%= tcwh.top() %>
-                <%= tcwh.logout() %>
+                <span class="header-left">
+                    <%= tcwh.top() %>
+                    <%= tcwh.history() %>
+                    <%= tcwh.logout() %>
+                </span>
             </header>
                 <div id="contents">
                     <center>
-                        <h1>CommentComplete</h1>
-                        <p>書き込みました</p>
+                        <h1>- CommentComplete -</h1>
+                        <h4>書き込みました</h4>
                     </center>
                 <!--/#contents--></div>
                 <footer></footer>

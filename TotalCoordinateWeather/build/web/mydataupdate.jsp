@@ -3,8 +3,7 @@
     Created on : 2016/07/19, 16:02:00
     Author     : 1999itukinao
 --%>
-<%@page import="Model.UserDataBeans"%>
-<%@page import="Model.TCWHelper"%>
+<%@page import="Model.*"%>
 <%
     HttpSession hs = request.getSession();
     TCWHelper tcwh = new TCWHelper();
@@ -16,8 +15,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
-        <!--css-->
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/registration.css">
+        <!-- css -->
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/tcw.css">
 
         <title>TCW ユーザー情報更新page</title>
     </head>
@@ -26,8 +25,8 @@
             <header></header>
             <div id="contents">
                 <center>
-                    <h1>Mydata Update</h1>
-                    <div id="frame">
+                    <h1>- Mydata Update -</h1>
+                    <div class="frame other in">
                         <form action="MydataUpdateResult" method="POST">
                             NAME: <input type="text" name="name" value="<%= udb.getName() %>">
                             <br>
@@ -49,11 +48,11 @@
                                 <% } %>
                             </select>
                             <br>
-                            <input id="submit-button" type="submit" name="register" value="Update">
+                            <input id="btn" type="submit" name="register" value="Update">
                             <%--アクセスルートチェック--%>
                             <input type="hidden" name="ac" value="<%= hs.getAttribute("ac") %>">
                         </form>
-                    <!--/#frame--></div>
+                    <!--/.frame--></div>
                 </center>
             <!--/#contents--></div>
             <footer></footer>

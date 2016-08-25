@@ -3,7 +3,7 @@
     Created on : 2016/07/28, 17:57:01
     Author     : 1999itukinao
 --%>
-<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.*"%>
 <%@page import="Model.*"%>
 <%
     HttpSession hs = request.getSession();
@@ -16,25 +16,28 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
-        <!--css-->
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/history.css">
-        <!--jQuery>
+        <!-- css -->
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/tcw.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script type="text/javascript" src="js/proposal.js"></script-->
+        <script type="text/javascript" src="js/tcw.js"></script>
 
         <title>履歴 Page</title>
     </head>
     <body>
         <div id="wrap">
             <header>
-                <%= tcwh.top() %>
-                <%= tcwh.logout() %>
+                <span class="header-left">
+                    <%= tcwh.top() %>
+                    <%= tcwh.logout() %>
+                </span>
             </header>
                 <div id="contents">
                     <center>
-                        <h1>History</h1>
+                        <h1>- History -</h1>
                         <div id="main">
-                            <table class="history">
+                            <table class="table history">
                                 <tdody>
                                     <% for(int i = 0; i < hdbList.size(); i++) { %>
                                     <tr>
@@ -56,7 +59,7 @@
                                                 <span class="temp_max"><%= hdbList.get(i).getTemp_max() %></span>℃/
                                                 <span class="temp_min"><%= hdbList.get(i).getTemp_min() %></span>℃<br>
                                                 湿度：<%= hdbList.get(i).getHumidity() %>％<br>
-                                                風速<%= hdbList.get(i).getSpeed() %>m/s<br>
+                                                風速：<%= hdbList.get(i).getSpeed() %>m/s<br>
                                             <!--/.detail--></div>
                                         </td>
                                         <td>
@@ -70,6 +73,9 @@
                                     <% } %>
                                 </tdody>
                             </table>
+                                <div class="page-top">
+                                    <h3>Page Top</h3>
+                                </div>
                         <!--/#main--></div>
                    </center>
                 <!--dontents--></div>

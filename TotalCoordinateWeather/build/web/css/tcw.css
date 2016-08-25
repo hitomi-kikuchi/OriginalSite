@@ -1,0 +1,266 @@
+        
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family:'メイリオ',Meiryo;
+}
+
+h1 {
+    color: #FFC20B;
+    font-family: Comic Sans MS;
+}
+
+#wrap{
+     width: 100%;
+     position: relative;
+     height:auto !important; /*IE6対策*/
+     height: 100%; /*IE6対策*/
+     min-height: 100%;
+}
+
+header {
+    background-image: url(http://foollovers.com/mat/stripe/ma02.gif);
+    background-repeat: repeat;
+    height:120px;
+    width: 100%;
+    position: absolute;
+    top:0;
+}
+
+#contents{
+    padding: 120px 0px; /*ヘッダー・フッターの高さと同じ*/
+}
+
+footer {
+    background-image: url(http://foollovers.com/mat/stripe/ma02.gif);
+    background-repeat: repeat;
+    height:120px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+/*---- ここまでが共通CSS ----*/
+
+
+/*---- header左側の各ページ遷移ボタン ----*/
+/*-- top(Login), choice, proposal, registrationcomplete, mydata, 
+myupdateresult, mydatadeleteresult, history, commentcomplete --*/
+
+.header-left {
+    margin-left: 20px;
+}
+
+button {
+    width: 10%;
+    font-size: 18px;
+    font-family: Comic Sans MS;
+    color: #808080;
+    background-color: #fff;
+    border: dotted 2px #808080; 
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-left: 15px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+/*---- header右端のMydata遷移リンク ----*/
+/*-- choice. proposal --*/
+
+.header-right {
+    float: right;
+    margin-right: 20px;
+    margin-top: 25px;
+}
+
+.header-right p{
+    font-size: 18px;
+    background-color: #fff;
+    border: dotted 2px #808080; 
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/*---- フレームを付ける ----*/
+/*-- top, choice, registration, registrationconfirm, mydata,
+mydataupdate, mydataupdateresult, mydatadelete --*/
+
+.frame {
+    border: solid 2px #808080;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 25px;
+}
+
+.top {
+    width: 30%;
+}
+
+.other {
+    width: 40%;
+}
+
+.in {
+    margin-bottom: 50px;
+}
+
+/*---- ログイン時の表示 ----*/
+/*-- top(Login) --*/
+
+.login {
+    font-size: 18px;
+    margin: 30px;
+}
+
+/*---- 入力フォームの列を揃える ----*/
+/*-- top(Logout), chice, registration, myupdate --*/
+
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+    padding: 5px 0;
+    letter-spacing: 1px;
+}
+
+select, input {
+    font-family:'メイリオ',Meiryo;
+    width: 220px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+/*---- formボタン ----*/
+/*-- top, choice, registration, mydata,
+mydataupdate, mydatadelete,comment --*/
+
+form {
+    display: inline;
+}
+
+.btn {
+    width: 100px;
+    padding: 5px 14px;
+    margin: 20px 8px;
+    border-radius: 8px; 
+    font-size: 18px;
+    font-family: Comic Sans MS;
+    color: #fff;
+    background-color: #acacac;
+    box-shadow: 1px 5px grey;
+    cursor: pointer;
+}
+
+.btn:active {
+    position: relative;
+    top: 5px;
+    left: 1px;
+    box-shadow: none;
+}
+
+/*---- テーブル ----*/
+/*-- proposal, history --*/
+
+/*table, tbody, tr, td {
+    display: inline-block;
+}*/
+
+.table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.weather {
+    width: 50%;   
+}
+
+.history {
+    width: 70%;
+}
+
+.table td {
+    text-align:center;
+    padding: 6px;
+    background-color: #fff;
+    border: 1px solid #b9b9b9;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.icon {
+    float: left;
+}
+
+.detail {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.temp_max {
+    color: #ff3333;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.temp_min {
+    color: #0099cc;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/*---- 画像サイズ ----*/
+/*-- proposal --*/
+
+.image {
+     height: 350px;
+}
+
+/*---- ページトップへ移動するボタン ----*/
+/*-- history --*/
+
+.page-top h3 {
+    background-color: #82b9b9;
+    color: #fff;
+    width: 10%;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px #808080;
+    margin-bottom: 50px;
+}
+
+.page-top :active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
+
+/*---- コメント記述 ----*/
+/*-- comment --*/
+
+.daialy {
+    margin: 0;
+}
+
+textArea {
+    width: 50%;
+    height: 120px;
+    margin: 10px;
+    font-family: 'メイリオ',Meiryo;
+}
+
+/*---- 実行完了文 ----*/
+/*-- registrationcomplete, mydatadeleteresult, commentcomplete, error --*/
+
+h4 {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}

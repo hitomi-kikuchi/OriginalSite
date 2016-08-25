@@ -64,31 +64,33 @@ public final class top_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <!--css-->\n");
       out.write("        <link rel=\"stylesheet\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/css/top.css\">\n");
+      out.write("/css/tcw.css\">\n");
       out.write("\n");
       out.write("        <title>TCW TopPage</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
       out.write("        <div id=\"wrap\">\n");
       out.write("            <header>\n");
-      out.write("                ");
+      out.write("                <div class=\"header-menu\">\n");
+      out.write("                    ");
  if(login){ 
       out.write("\n");
-      out.write("                ");
+      out.write("                    ");
       out.print( TCWHelper.getInstance().logout() );
       out.write("\n");
-      out.write("                ");
+      out.write("                    ");
  } 
       out.write("\n");
+      out.write("                </div>\n");
       out.write("            </header>\n");
       out.write("            <div id=\"contents\">\n");
       out.write("                <center>\n");
       out.write("                <h1>— Total Coordinate due to Weather —</h1>\n");
-      out.write("                <div id=\"frame\">\n");
+      out.write("                <div class=\"frame top in\">\n");
       out.write("                    ");
  if(login) { 
       out.write("\n");
-      out.write("                    <div id=\"mydata\">\n");
+      out.write("                    <div class=\"loginver\">\n");
       out.write("                        ようこそ <a href=\"Mydata\">");
       out.print( udb.getName() );
       out.write("</a> さん\n");
@@ -103,8 +105,14 @@ public final class top_jsp extends org.apache.jasper.runtime.HttpJspBase
  }else { 
       out.write("\n");
       out.write("                    <form action=\"Choice\" method=\"POST\">\n");
-      out.write("                        NAME: <input type=\"text\" name=\"name\" ><br>\n");
-      out.write("                        PASS: <input type=\"password\" name=\"pass\" placeholder=\"4文字の英数字\"><br><br>\n");
+      out.write("                        <div>\n");
+      out.write("                            <label for=\"name\">NAME:</label>\n");
+      out.write("                            <input type=\"text\" name=\"name\">\n");
+      out.write("                        </div>\n");
+      out.write("                        <div>\n");
+      out.write("                            <label for=\"pass\">PASS:</label>\n");
+      out.write("                            <input type=\"password\" name=\"pass\" placeholder=\" 4文字の英数字\">\n");
+      out.write("                        </div>\n");
       out.write("                        <input class=\"submit-button\" type=\"submit\" name=\"login\" value=\"LOGIN\">　\n");
       out.write("                        <a href=\"Registration\">新規登録</a> \n");
       out.write("                    </form>\n");

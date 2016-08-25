@@ -58,9 +58,11 @@ public class Proposal extends HttpServlet {
 
             //OpenWeatherMap APIを用いて活動場所の天候情報を取得
             String result = JsonHelper.getResult(location);
+            System.out.println(result);
                         
             //文字列からJSONへの変換
             JsonNode node = JsonHelper.getJsonNode(result);
+            System.out.println(node);
                         
             //天候情報をWeatherDataBeansへ格納
             HistoryDataBeans weather = JsonHelper.getWeather(node);
